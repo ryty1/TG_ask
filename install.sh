@@ -39,9 +39,9 @@ check_and_install() {
 
 # 选择操作（安装/修改配置/卸载）
 echo "请选择操作："
-echo "1. 一键安装 userbot"
+echo "1. 安装 TG快捷提醒"
 echo "2. 修改 .env 配置"
-echo "3. 卸载 userbot"
+echo "3. 卸载 TG快捷提醒"
 read -p "输入选项 [1-3]: " ACTION
 
 case $ACTION in
