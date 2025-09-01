@@ -14,6 +14,29 @@ SERVICE_FILE="/etc/systemd/system/userbot.service"
 SCRIPT_URL="https://raw.githubusercontent.com/ryty1/TG_ask/main/userbot.py"
 SCRIPT_PATH="$BOT_DIR/userbot.py"
 
+# 安装前检查 Python 和 curl
+check_and_install() {
+    # 检查 Python
+    if ! command -v python3 >/dev/null 2>&1; then
+        echo "❌ 未找到 Python3，正在安装..."
+        sudo apt-get update -y  >/dev/null 2>&1
+        sudo apt-get install -y python3 python3-pip  >/dev/null 2>&1
+        echo "✅ Python3 安装完成"
+    else
+        echo "✅ Python3 已安装"
+    fi
+
+    # 检查 curl
+    if ! command -v curl >/dev/null 2>&1; then
+        echo "❌ 未找到 curl，正在安装..."
+        sudo apt-get install -y curl  >/dev/null 2>&1
+        echo "✅ curl 安装完成"
+    else
+        echo "✅ curl 已安装"
+    fi
+}
+
+
 # 选择操作（安装/修改配置/卸载）
 echo "请选择操作："
 echo "1. 一键安装 userbot"
@@ -23,6 +46,9 @@ read -p "输入选项 [1-3]: " ACTION
 
 case $ACTION in
 1)
+    # 在开始前检查 Python 和 curl
+    check_and_install
+    
     echo "安装目录：$BOT_DIR"
     echo "脚本将以用户：$RUNNER_USER 来拥有并运行"
 
