@@ -43,7 +43,7 @@ echo "1. 安装 TG快捷提醒"
 echo "2. 修改 .env 配置"
 echo "3. 卸载 TG快捷提醒"
 echo "4. 返回 VIP 工具箱"
-read -p "输入选项 [1-3]: " ACTION
+read -p "输入选项 [1-4]: " ACTION
 
 case $ACTION in
 1)
