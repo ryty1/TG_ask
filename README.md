@@ -11,7 +11,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/ryty1/TG_ask/refs/heads/main/i
 |---------------|---------------------------------|---------|
 | BOT_TOKEN     | 机器人 Token                      | 必须    |
 | 群号 I D       | 自己去获取，-100 开头的           | 必须    |
-| 管理 TGID     | 可以使用脚本管理权限的 TGID       | 必须    |
+| 管理 TGID     | 可以使用脚本管理权限的人       | 必须    |
 | 触发关键字    | 设置关键字，自动触发 /ask         | 选填    |
 
 ### 使用命令
