@@ -19,6 +19,6 @@ bash <(curl -Ls https://raw.githubusercontent.com/ryty1/TG_ask/refs/heads/main/i
 | 命令                 | 说明                       | 权限/条件           |
 |----------------------|----------------------------|------------------|
 | /ask                 | 快速 @ 通知提醒             | 可关键字自动触发   |
-| /ask add <TGID>      | 添加通知名单               | env 管理员权限     |
-| /ask del <TGID>      | 删除通知名单               | env 管理员权限     |
+| /ask add TGID      | 添加通知名单               | env 管理员权限     |
+| /ask del TGID      | 删除通知名单               | env 管理员权限     |
 | /ask m               | 查看通知名单               | env 管理员权限     |
