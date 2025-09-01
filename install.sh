@@ -42,6 +42,7 @@ echo "请选择操作："
 echo "1. 安装 TG快捷提醒"
 echo "2. 修改 .env 配置"
 echo "3. 卸载 TG快捷提醒"
+echo "4. 返回 VIP 工具箱"
 read -p "输入选项 [1-3]: " ACTION
 
 case $ACTION in
@@ -249,5 +250,8 @@ EOF
 *)
     echo "❌ 无效选项"
     exit 1
+    ;;
+4)
+    bash <(curl -Ls https://raw.githubusercontent.com/ryty1/Checkin/refs/heads/main/1.sh)
     ;;
 esac
